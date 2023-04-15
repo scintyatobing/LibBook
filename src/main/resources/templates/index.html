@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
+	    
+	<title>Home</title>
+	
+	<style type="text/css">
+	#todocontainer {
+		margin-top: 50px;
+	}
+	 c
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	
+	body {
+		width: 100%;
+		min-height: 100hv;
+		overflow-x: hidden;
+	}
+	    
+	</style>
+	
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+<body>
+<section id="header">
+		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark "
+			style="background-color: #e3f2fd;">
+			
+			<a class="navbar-brand" href="/">LibBook</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+			        <li class="nav-item active"><a class="nav-link" th:href="@{/register}">Registrasi</a></li>
+			        <li class="nav-item active"><a class="nav-link" th:href="@{/login}">Login</a></li>
+				</ul>
+			</div>
+		</nav>
+	</section>
+
+ <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Welcome to <br> <span>Book Management System</span></h1>
+      </div>
+    </div>
+    <!-- akhir Jumbotron -->
+
+
+    <!-- container -->
+    <div class="container">
+
+      <!-- info panel -->
+      <div class="row justify-content-center">
+        <div class="col-10 info-panel">
+          <div class="row">
+            <div class="col-sm">
+              <img th:src="@{/images/profile_200px.png}"class="img-fluid float-left">
+              <h4>Easy</h4>
+              <p>Membantu pihak pustakawan mendata buku</p>
+            </div>
+            <div class="col-lg">
+              <img th:src="@{/images/pass_fail_160px.png}"class="img-fluid float-left">
+              <h4>Store</h4>
+              <p>Menyimpan data buku</p>
+            </div>
+            <div class="col-lg">
+              <img th:src="@{/images/security.png}"class="img-fluid float-left">
+              <h4>Safety</h4>
+              <p>Data buku tersimpan dengan aman, tanpa resah kehilangan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- akhir info panel -->
+
+
+      <!-- Workingspace -->
+      <div class="row workingspace">
+        <div class="col-lg-6">
+          <img th:src="@{/images/book.jpg}" class="img-fluid">
+        </div>
+        <div class="col-lg-5">
+          <h2><span>Website</span> LibBook</h2>
+          <p>Website ini merupakan website yang dapat membantu pustakawan 
+          dalam managing data buku yang ada di perpustakaan</p>
+          <a th:href="@{/list/books}" class="btn btn-info tombol">View List Book</a>
+        </div>
+      </div>
+      <!-- akhir Workingspace -->
+
+
+
+    </div>
+    <!-- akhir container -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

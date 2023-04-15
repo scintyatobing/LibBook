@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Book Management System</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+</head>
+<body>
+<section id="header">
+		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark "
+			style="background-color: #e3f2fd;">
+			
+			<a class="navbar-brand" href="">LibBook</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<!-- <li class="nav-item active"><a class="nav-link"
+							th:href="@{/logout}">Logout <b>[[${#request.userPrincipal.principal.fullName}]]</b></a>
+						</li> -->
+						
+						<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         				<b>[[${#request.userPrincipal.principal.fullName}]]</b></a>
+				        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+				          <a class="dropdown-item" th:href="@{/}">Logout</a>
+				        </div>
+				      	</li>
+					</ul>
+			</div>
+		</nav>
+	</section>
+     
+	<div class = "container">
+		<div class = "row">
+			        <div class="pull-right mt-3">
+			            <a class="btn btn-primary mb-3" th:href="@{/books}"><b> Kembali</b></a>
+			        </div>
+			    </div>
+			</div>
+			<div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+				<h1 class = "text-center"> Edit Data Buku </h1>
+				<div class = "card-body">
+					<form th:action="@{/book/{book_id} (book_id=${book.book_id})}" th:object = "${book}" method="POST">
+						<div class ="form-group">
+							<div class ="form-group">
+							<label> Kategori Buku </label>
+							<select name="category_id" class="form-control">
+								<option>--Pilih Kategori--</option>
+		                        <option value="1">Novel</option>
+		                        <option value="2">Fiksi</option>
+		                        <option value="3">Romance</option>
+		                    </select> 
+						</div>
+						
+						<div class ="form-group">
+							<label> Judul Buku </label>
+							<input
+							type = "text"
+							name = "title"
+							th:field = "*{title}"
+							class = "form-control"
+							placeholder="Masukkan Judul Buku" 
+							/>
+						</div>
+						
+						<div class ="form-group">
+							<label> Penulis Buku </label>
+							<input
+							type = "text"
+							name = "author"
+							th:field = "*{author}"
+							class = "form-control"
+							placeholder="Masukkan Penulis Buku" 
+							/>
+						</div>
+						
+						<div class ="form-group">
+							<label> Penerbit Buku </label>
+							<input
+							type = "text"
+							name = "publisher"
+							th:field = "*{publisher}"
+							class = "form-control"
+							placeholder="Masukkan Penerbit Buku" 
+							/>
+						</div>
+						
+						<div class ="form-group">
+							<label> Tahun Buku </label>
+							<input
+							type = "number"
+							name = "year"
+							th:field = "*{year}"
+							class = "form-control"
+							placeholder="Masukkan Tahun Buku diterbitkan " 
+							/>
+						</div>
+						
+						<div class = "box-footer">
+							<button type="submit" class = "btn btn-primary">
+								Submit
+							</button>
+						</div>
+					</form>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
